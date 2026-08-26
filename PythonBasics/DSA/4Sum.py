@@ -24,7 +24,7 @@ while i<=n-4 :#outermost loop starts from 0 ends at n-4.
 
      l=n-1 #initializing l ,
 
-     while k<l:#for each outermost i and foreach j afterward, the loop will run with condition k<l.
+     while k<l: #for each outermost i and foreach j afterward, the loop will run with condition k<l.
           
          sum=List[i]+List[j]+List[k]+List[l] #calculating sum with present i,j,k,l.
              
@@ -50,9 +50,9 @@ while i<=n-4 :#outermost loop starts from 0 ends at n-4.
      if isfound==True: #this is all to break the outer loop j.
       break    
 
-     j=j+1#increament to regulate the loop.
+     j=j+1 #increament to regulate the loop.
 
-  if isfound==True:#this is all to break the outermost loop i.
+  if isfound==True: #this is all to break the outermost loop i.
    break
 
   i=i+1 #increamenting outermost loop i .
