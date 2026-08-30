@@ -1,6 +1,6 @@
 
-
-#The actual problem name is :find minimum sized window with sum<=7.
+#its variable sized sliding window problem.
+#The actual problem name is :find minimum sized window with sum>=7.
 #These type of problem is solved used variable size sliding window.
 
 List=[2,3,1,6,4,3,7]
