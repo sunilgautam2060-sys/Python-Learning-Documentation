@@ -34,16 +34,11 @@ print("The Maximum Sum Subarray starts from :" , StartingIndex)
 print("Ends At : " , EndingIndex)
 print("And The Subarray is : " )
 
-for i in range (StartingIndex , EndingIndex+1): # Print the Subarray
-
-    print( List[i] )
-    
+print(List[StartingIndex:EndingIndex+1])# Print the Subarray
 
 print("And Their Sum Is : " , MaxSum)# Print Maxsum.
 
         
-
-
 
             
 
