@@ -8,11 +8,10 @@
 #than why use the sorting algorithm which takes o(nlogn) instead use cyclic sort
 #which time complexity is o(n).
 
-#plus it is mainly used with positive array it will also work with negative but mainly we 
-#work this with positive element.
 
 
-List=[4,1,2,9,3,5,8,6,7] #notice the array belongs to range 1 to 9 . 
+
+List=[3,1,2,5,4] #notice the array belongs to range 1 to 9 . 
 
 n=len(List)
 
@@ -35,7 +34,17 @@ while i<n:
 print(List)              
 
 
-
+#This is PURE cyclic sort.
+#
+#No negative marking.
+#
+#No duplicate detection.
+#
+#No missing detection.
+#
+#Just:
+#
+#Put every number in its home.
 
 
 
