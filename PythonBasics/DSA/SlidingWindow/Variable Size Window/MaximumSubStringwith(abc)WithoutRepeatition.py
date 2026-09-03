@@ -1,9 +1,8 @@
 
 #the question is to find the longest substring without repeating a,b and c .
 
-
 #the logic is start i and j from 0 , move j one step at a time in each j movement,
-#we check the count of a,b,c in the window,  from i to j .
+#there will be checking is it (a or b or c)? if yes than we increase the  their individual count.
 #if we get in a window where a,b,c are only one time than we track or store that window.
 #than we continue expanding j , if we encounter the count of (a or b or c) more than 1 time 
 #than we shrink the window from left.
