@@ -1,12 +1,7 @@
 
 
 
-
-
-
-
-
-string="eaaebbdaccdabc"
+string="eaaebbdakccdadbc"
 
 n=len(string)
 

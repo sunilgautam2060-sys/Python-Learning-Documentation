@@ -1,10 +1,15 @@
 
-String=input("Enter Any String : ") #Enter Any Text Or String.
+
+
+String="kabdfedaeabdc"
 n=len(String) #Length Of String.
 
 LeftWindow=0 #Left Window Initialization.
 
 LongestSubstring=0 #Initializing The Longest Substring as 0 At Start.
+
+StartingIndex=0
+EndingIndex=0
 
 for RightWindow in range(n): #It Introduce New Character Of String At Window.
 
@@ -26,5 +31,5 @@ for RightWindow in range(n): #It Introduce New Character Of String At Window.
 
 # It prints the longest substring value.
 print("The Longest Substring Without Repeting Character is : " , LongestSubstring)          
-print("Starting Index : " , StartingIndex)
-print("Ending Index : " , EndingIndex)
+print(String[StartingIndex:EndingIndex+1])# It prints the longest substring without repeating character.    
+
