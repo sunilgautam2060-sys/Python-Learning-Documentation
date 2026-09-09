@@ -16,8 +16,12 @@ string="Hello , Sunil"
 x=string[2]*4
 print(x)
 SlicedString=string[0:10]#this will not change original string
+print(SlicedString)
+print(string)
 IndexString=string.index(",")#this will not change original string
+print(IndexString)
 print(string)
 print(string +  "cat")#concatinating string 
 print(string)#still no change in original string
+
 
