@@ -19,10 +19,10 @@
            #scenario 2: the ListB completes ->i need to do nothing since i am extending and merging the list in ListA itself so it is already in right way.
              
 
-ListA=[1,3,5,7,9]
+ListA=[1,3,5,7,9,20]
 m=len(ListA)
 
-ListB=[2,4,6,8,10]
+ListB=[2,4,6,8,10,17]
 n=len(ListB)
 
 ListA.extend([0]*n) #extended the ListA so that i can merge list without extra space.
