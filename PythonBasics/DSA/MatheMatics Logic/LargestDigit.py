@@ -7,7 +7,7 @@ largest=0
 while num>0:
     remainder=num%10           #remainder extract last ones digit .
 
-    if remainder>largest:      #calculating largest so far 
+    if remainder>largest:      #calculating largest so far.
         largest=remainder
 
     num=num//10                #decreasing the place value of number.
