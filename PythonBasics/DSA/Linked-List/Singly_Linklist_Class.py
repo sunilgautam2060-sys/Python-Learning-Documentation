@@ -55,78 +55,71 @@ class singly_linked_list:
 
     #inserting element in Linked List.
     #here data =data to insert in linklist, position=in which node position in linklist to insert the data.
-    
-def insert(self, data, position):
+     
+    def insert(self, data, position):
 
-    # Creating node
-    new_node = node(data)
+     # Creating node
+        new_node = node(data)
 
-    if position == 1:
+        
+        if position == 1:
+         new_node.next = self.head
+         self.head = new_node
+         self.traversal()
+         return
 
-        new_node.next = self.head
-        self.head = new_node
+        else:
 
-    else:
+         previous = None
+         current = self.head
+         count = 1
+         
 
-        previous = None
-        current = self.head
-        count = 0
-        found = False
+         while current != None and count<position:
 
-        while current != None:
+             previous = current
+             current = current.next
+             count += 1
 
-            if count == position - 1:
-                found = True
-                break
-
-            count += 1
-            previous = current
-            current = current.next
-
-        if found == True:
-            previous.next = new_node
-            new_node.next = current
+        if count==position:
+           previous.next = new_node
+           new_node.next = current
+           self.traversal()
+           return
 
         else:
             print("The Position does not exist")
-
-
+            self.traversal()
+            return
 
 
     def remove(self,data):
        temp=self.head
 
-       #it means if there need to be more than 1 node for this logic.
-       if temp.next is not None:
-         
-         if temp.data==data:
-             self.head=temp.next
-             return
-            
-         else:
-            found=False
-            previous=None
+       if temp is None:
+          print("Linked_List is empty")
+          return
 
-            while temp != None:
+       if temp.data==data :
+           self.head=temp.next
+           return self.traversal()
+        
+       while temp.next!=None:
 
-              if temp.data==data:  
-                 found=True
-                 break
+           if temp.next.data==data:
+               break
 
-              previous=temp
-              temp=temp.next
+           temp=temp.next
 
-              
-            if found==True:
-                previous.next=temp.next
-                return
+       temp.next=temp.next.next   
 
-            else:
-                print("Node not found ")
+       print("The Linked List after removing : ")    
+       return self.traversal() 
+           
 
-
+        
     def delete(self,position):
-
+     count=1
 
      if self.head == None:
         print("Linked-List is Empty")
@@ -134,37 +127,35 @@ def insert(self, data, position):
 
      elif position == 1:
         self.head = self.head.next
+        self.traversal()
         return
 
      else:
-        found = False
-        current = self.head
-        previous = None
-        count = 1
+        previous=None
+        current=self.head
+        while current!=None :
+           
+           if count==position:
+              break
 
-        while current != None:
-
-            if count == position:
-                found = True
-                break
-
-            previous = current
-            current = current.next
-            count += 1
-
-        if found == True:
-            previous.next = current.next
+           previous=current
+           current=current.next
+           count+=1
 
         else:
-            print("The Position does not exist")
-
-
-                        
+           print("The position does not exist ")
+           return
+        
+        previous.next=current.next
+        self.traversal()
+        return
+         
 
 sll=singly_linked_list()#making the object named:sll , of class singly_linked_list.
 sll.append(4)           
 sll.append(7)
-sll.append(9)
-sll.delete(4)
-sll.traversal()
+sll.append(14)
+sll.append(22)
+sll.insert(17,3)
+
 
