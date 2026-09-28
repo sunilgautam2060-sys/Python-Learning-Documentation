@@ -7,7 +7,7 @@ class node:
         self.next=None
 
 
-#This will makke Singly Linked List.
+#This will make Singly Linked List.
 class singly_linked_list:
 
     #By default there will be no linked-list so self.head will be None.
@@ -18,7 +18,7 @@ class singly_linked_list:
     #append function definition.
     def append(self,data):
 
-        #calling node function to make node of data to append.
+        #calling node class constructor to make node of data to append.
         new_node=node(data)
 
 
@@ -149,13 +149,33 @@ class singly_linked_list:
         previous.next=current.next
         self.traversal()
         return
-         
+
+
+    def sum_odd_nodes(self):
+
+       count=1
+       result=0
+
+       current=self.head
+
+       while current!=None:
+          if count % 2 != 0:
+             result+=current.data
+
+          current=current.next
+          count+=1   
+
+       print(result)
+       return
+          
+             
+                     
 
 sll=singly_linked_list()#making the object named:sll , of class singly_linked_list.
 sll.append(4)           
 sll.append(7)
 sll.append(14)
 sll.append(22)
-sll.insert(17,3)
+sll.sum_odd_nodes()
 
 
