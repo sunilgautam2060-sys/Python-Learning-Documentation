@@ -14,7 +14,6 @@ class stack:
     def __init__(self):
         self.top=None
 
-
     #check if stack is empty.   
     def isempty(self):
 

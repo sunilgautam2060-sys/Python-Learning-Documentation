@@ -13,11 +13,12 @@ Node2=ListNode(9)
 Node3=ListNode(13)
 Node4=ListNode(21)
 
+
 #Linking the Node manually.
 Node1.next=Node2
 Node2.next=Node3
 Node3.next=Node4
-Node4.next=None
+Node4.next=Node1
 
 #assigning Node1 as Head.
 head=Node1

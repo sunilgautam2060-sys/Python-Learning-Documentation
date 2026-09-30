@@ -1,4 +1,6 @@
 
+#the difference in next_greater_element-II is that we can check in both direction in
+#circular way like in list=[4,12,7,11]->[12,-1,11,12]
 
 
 class Solution:

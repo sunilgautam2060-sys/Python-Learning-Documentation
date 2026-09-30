@@ -2,8 +2,6 @@
 #previous greater/smaller=iterate from left to right.
 #next greater/smaller=iterate from right to left.
 
-
-
 #the core logic is:
 #visit each nums[i] : two possible scenario 
 #either stack is empty : just append nums[i] to stack and move on ,do not do
