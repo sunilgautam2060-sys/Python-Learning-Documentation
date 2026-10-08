@@ -12,7 +12,7 @@ i=0 # i role is to check whether the new element(j) is same as me ?
 j=1 # j task is to traverse the list and introduce new element to i ,
     #so that i can verify new element is eligible to enter or not.
 
-while j<n:#j is traversing up to n.
+while j<n:#j is traversi ng up to n.
 
     if List[i]!=List[j]:#if they are different than only run this case:
         i=i+1           #First increase i , than place new eligible element in window.

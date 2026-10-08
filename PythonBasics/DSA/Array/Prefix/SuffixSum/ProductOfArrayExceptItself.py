@@ -8,27 +8,32 @@
 
 
 
-List=[1,2,3,4,5,6]
+class Solution:
+    def productExceptSelf(self, nums: list[int]) -> list[int]:
 
-n=len(List)
+        answer=[]
 
-Total_Product=1
-ResultProduct=[]
+        left_product=1
+        right_product=1
+       
+        
+        #left to right traversal to calculate left product.
+        for i in range(len(nums)):
+            answer.append(left_product)
+            left_product*=nums[i]
+
+     
+        #right to left traversal to calculate right product.
+
+        for i in range(len(nums)-1,-1,-1):
+            answer[i]*=right_product
+            right_product*=nums[i]
+
+        return answer        
+
+s=Solution()
+print(s.productExceptSelf([1,2,3,4,5])  )
 
 
-for i in range(n): #this toolbox calculate total_product of given list.
-    Total_Product*=List[i]
 
-for i in range(n):
-    if i==0:
-      LeftProduct=1  
-
-    else:
-        LeftProduct*=List[i-1]
-
-    RightProduct=(Total_Product//LeftProduct)//List[i]
-
-    ResultProduct.append(LeftProduct*RightProduct)
-
-print(ResultProduct)
-    
+        
