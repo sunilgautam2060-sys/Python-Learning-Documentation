@@ -1,7 +1,5 @@
 
 
-
-
 from math import log10
 
 def Rev(n):
